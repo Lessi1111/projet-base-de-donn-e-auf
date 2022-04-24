@@ -1,0 +1,71 @@
+body {
+    background-color: #ddd;
+}
+
+.col-4 img {
+    width: 150px;
+    height: 100px;
+    margin-left: 110px;
+}
+.col-3 a {
+    text-decoration: none;
+    color: blue;
+    font-size: 25px;
+    height: 100px;
+    margin-left: 200px;
+    
+}
+.col-3 {
+    padding-top: 30px;
+}
+ h1 {
+    font-size: 25px;
+    margin-left: 300px;
+}
+
+
+.row table {
+    margin-right: 0px;
+    margin-left: 450px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    margin-top: 80px;
+}
+.ligne {
+    display: flex;
+}
+.bloc {
+    display: block;
+    margin-left: 450px;
+}
+.bloc img {
+    width: 60px;
+    height: 60px;
+}
+.lien a {
+    display: block;
+    padding-top: 10px;
+    margin-left: 200px;
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+}
+.pied {
+    display: flex;
+}
+footer h2 {
+    margin-left: 600px;
+    font-size: 15px;
+}
