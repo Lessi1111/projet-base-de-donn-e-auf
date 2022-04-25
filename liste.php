@@ -36,15 +36,13 @@
    $resultat = mysqli_query($connection,$sql) or die ("bad query");
 
    echo "<table border='1'>";
-   echo "<tr><td>ID</td> <td>NOM</td> <td>PRENOM</td> <td>DATE_NAISSANCE</td> <td>Email</td> <td>NUMERO</td> <td>DATE_DEBUT_D</td> </tr>\n";
+   echo "<tr><td><b>ID</b></td> <td><b>NOM</b></td> <td> <b>PRENOM</b></td> <td> <b>DATE_NAISSANCE</b></td> <td> <b>Email</b></td> <td> <b>NUMERO</b></td> <td> <b>DATE_DEBUT_D</b></td> </tr>\n";
    while ($row=mysqli_fetch_assoc($resultat)){
        echo " <tr><td>{$row['ID']}</td><td>{$row['NOM']}</td><td>{$row['PRENOM']}</td><td>{$row['DATE_NAISSANCE']}</td><td>{$row['Email']}</td><td>{$row['NUMERO']}</td><td>{$row['DATE_DEBUT_D']}</td></tr>\n";
    }
    echo "</table>";
   
-   
-   
-   
+
    
    
    ?>
