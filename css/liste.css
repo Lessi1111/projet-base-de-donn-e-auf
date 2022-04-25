@@ -20,13 +20,15 @@ body {
 }
  h1 {
     font-size: 25px;
-    margin-left: 300px;
+    margin-left: 350px;
 }
 
 
-.row table {
+table, th, td {
     margin-right: 0px;
-    margin-left: 450px;
+    margin-left: 20px;
+    border: 1px solid blue;
+    border-collapse: collapse;
 }
 
 

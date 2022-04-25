@@ -18,11 +18,10 @@ $resultat = mysqli_query($connection, $query);
 
 
 if ($resultat) {
-    echo "utlisateur ajouté avec succes";
-   
+    echo '<script language="javascript"> alert("Abonnée ajouté avec succès")</script>';
 }
 else{
-    echo "utlisateur non ajouté";
+    echo '<script language="javascript"> alert("Abonné non ajouté")</script>';
 }
 
 
