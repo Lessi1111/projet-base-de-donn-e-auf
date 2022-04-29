@@ -6,6 +6,7 @@ body {
     width: 150px;
     height: 100px;
     margin-left: 110px;
+    margin-top: -50px;
 }
 .col-3 a {
     text-decoration: none;
@@ -22,7 +23,13 @@ body {
     font-size: 25px;
     margin-left: 350px;
 }
-
+form {
+    margin-top: 50px;
+}
+.bouton {
+    margin-top: 120px;
+    display: flex;
+}
 
 table, th, td {
     margin-right: 0px;
@@ -43,7 +50,7 @@ table, th, td {
 
 
 footer {
-    margin-top: 80px;
+    margin-top: 120px;
 }
 .ligne {
     display: flex;
