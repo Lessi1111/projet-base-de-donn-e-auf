@@ -8,13 +8,17 @@ body {
     margin-left: 110px;
 }
 .col-3 a {
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 2px solid;
+    border-color: #dc3545;
+    color: white;
+    background-color: #dc3545;
+    font-size: 20px;
     text-decoration: none;
-    color: blue;
-    font-size: 25px;
-    height: 100px;
     margin-left: 100px;
-    
 }
+
 .col-3 {
     padding-top: 30px;
 }

@@ -1,3 +1,10 @@
+
+<?php
+
+include ("./index.php");
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +30,7 @@
                         <a href="liste.php">LISTE</a>
                     </div>
                     <div class="col-3">
-                        
+                   <a href="deconnexion.php" class="btn btn-danger">DECONNEXION</a>
                     </div>
                 </div>
             </div>
@@ -119,10 +126,5 @@
 
 </html>
 
-<?php
-
-include ("./index.php")
-
-?>
 </body>
 </html>

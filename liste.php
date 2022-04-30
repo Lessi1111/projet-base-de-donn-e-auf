@@ -1,3 +1,7 @@
+<?php 
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +24,9 @@
                     <div class="col-3">
                         <a href="enregistrement.php">ENREGISTRER</a>
                     </div>
-                   
+                    <div class="col-3">
+                   <a href="deconnexion.php" class="btn btn-danger">DECONNEXION</a>
+                    </div>
                 </div>
             </div>
         </nav>

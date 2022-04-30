@@ -6,13 +6,17 @@ body {
     width: 150px;
     height: 100px;
     margin-left: 110px;
-    margin-top: -50px;
+    margin-top: -5px;
 }
 .col-3 a {
     text-decoration: none;
-    color: blue;
-    font-size: 25px;
-    height: 100px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 2px solid;
+    border-color: #dc3545;
+    color: white;
+    background-color: #dc3545;
+    font-size: 20px;
     margin-left: 200px;
     
 }
@@ -22,9 +26,10 @@ body {
  h1 {
     font-size: 25px;
     margin-left: 350px;
+    margin-top: 25px;
 }
 form {
-    margin-top: 50px;
+    margin-top: 90px;
 }
 .bouton {
     margin-top: 120px;

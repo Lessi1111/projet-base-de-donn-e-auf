@@ -1,9 +1,6 @@
 <?php
 session_start();
-if (isset($erreur))
-{
-    echo '<font color="red">'.$erreur.'</font>';
-}
+
 include ("./index.php");
  if (isset($_POST['conect'])){
  $mailconnect = htmlspecialchars($_POST['nombre-1']);
@@ -13,9 +10,11 @@ include ("./index.php");
  $admin = "SELECT * FROM Administrateur WHERE Email = '$mailconnect' AND MOT_DE_PASSE = '$mdpconnect'";
  $result = mysqli_query($connection,$admin);
  $row = mysqli_num_rows($result);
- if ($row == '1'){
  
-  header("location: enregistrement.php");
+ if ($row > '0'){
+     $_SESSION['NOM'] = $nom;
+     $_SESSION['PRENOMS'] = $prenom;
+    header("location: enregistrement.php");
  }
  else {
      echo "Mauvais Email ou mot de passe";

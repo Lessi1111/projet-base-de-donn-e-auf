@@ -19,8 +19,8 @@
                 <div class="col-4">
                 <img class="img" src="images/logo.jpg" alt="">
                 </div>
-                <div class="col-3">
-                <button type="button" class="btn btn-danger mt-4" name="connection">CONNEXION</button>
+                <div class="col-3" id="lien">
+                <a href="./Authentification.php">CONNEXION</a>
                 </div>
                 <div class="col-1">
                     <a href="https://web.facebook.com/aufinternational?_rdc=1&_rdr"><img src="css/bootstrap-icons/facebook.svg" alt="lien-facebook"></a>
@@ -70,7 +70,7 @@
                             <label class="form-label">MOT DE PASSE</label>
                         </div>
                         <div class="col-5">
-                            <input type="text" class="form-control" name="mdp">
+                            <input type="password" class="form-control" name="mdp">
                         </div>
                     </div>
                     <div class="row mt-4">
@@ -78,7 +78,7 @@
                             <label class="form-label">CONFIRMER MOT DE PASSE</label>
                         </div>
                         <div class="col-5">
-                            <input type="text" class="form-control" name="mdp2">
+                            <input type="password" class="form-control" name="mdp2">
                         </div>
                     </div>
                     <button class="btn btn-danger mt-4" name="submit">S'INSCRIRE</button>
@@ -92,7 +92,7 @@
 
 
     <footer>
-        <div class="container">
+        <div class="container" id="pied">
             <div class="row">
                 <div class="col-4">
                     <img src="images/logo.jpg" alt="logo-auf">
@@ -128,29 +128,23 @@ if (isset($_POST["submit"])) {
     $nom = $_POST["nom"];
     $prenom = $_POST["prenom"];
     $mail = $_POST["mail"];
-    $mdp = $_POST["mdp"];
-    $mdp2 = $_POST["mdp2"];
+    $mdp = sha1($_POST["mdp"]);
+    $mdp2 = sha1($_POST["mdp2"]);
 
-    $query = "INSERT INTO `abonnes_auf` (`NOM`, `PRENOMS`, `Email`, `MOT_DE_PASSE`) 
+    $query = "INSERT INTO `administrateur` (`NOM`, `PRENOMS`, `Email`, `MOT_DE_PASSE`) 
 VALUES ('$nom', '$prenom', '$mail', '$mdp')";
 
-    $resultat = mysqli_query($connection, $query);
+    $result = mysqli_query($connection, $query);
     if ($mdp != $mdp2) {
         echo '<script language="javascript"> alert("mot de passe incorrect")</script>';
     } else {
-        if ($resultat) {
+        if ($result) {
             echo '<script language="javascript"> alert("Inscription reussie")</script>';
+            
         } else {
-    
+
             echo '<script language="javascript"> alert("Inscription echouée")</script>';
         }
     }
 }
-
-if (isset($_POST["connection"])){
-    header("location: Authentification.php");
-}
-
-
-
 ?>
